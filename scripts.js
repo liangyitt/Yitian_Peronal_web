@@ -124,7 +124,7 @@ function createProjectCard(project) {
                 <div class="desc">${project.desc}</div>
                 <div class="tags">${formatTags(project.tags)}</div>
                 <div class="project-links">
-                    <a href="paper/A Multi-Lane Mean Field Game and.pdf" target="_blank" class="project-link">
+                    <a href="paper/Multi_Lane.pdf" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
@@ -143,7 +143,7 @@ function createProjectCard(project) {
                     <a href="${project.link}" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'GitHub' : 'GitHub'}
                     </a>
-                    <a href="paper/A PINN-Based Framework for E!cient European (1).pdf" target="_blank" class="project-link">
+                    <a href="paper/PINN.pdf" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
@@ -162,7 +162,7 @@ function createProjectCard(project) {
                     <a href="${project.link}" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'GitHub' : 'GitHub'}
                     </a>
-                    <a href="paper/Approximation Properties of ReLU Neural Networks and Connections with Finite Element Methods (1).pdf" target="_blank" class="project-link">
+                    <a href="paper/ReLU.pdf" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
