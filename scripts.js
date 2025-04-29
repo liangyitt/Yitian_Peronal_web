@@ -124,7 +124,7 @@ function createProjectCard(project) {
                 <div class="desc">${project.desc}</div>
                 <div class="tags">${formatTags(project.tags)}</div>
                 <div class="project-links">
-                    <a href="https://drive.google.com/file/d/1SaT3aj2xQbtKgIMJK017OXSx-nH9au8W/view?usp=sharing" target="_blank" class="project-link">
+                    <a href="paper/A Multi-Lane Mean Field Game and.pdf" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
@@ -143,7 +143,7 @@ function createProjectCard(project) {
                     <a href="${project.link}" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'GitHub' : 'GitHub'}
                     </a>
-                    <a href="https://drive.google.com/file/d/1h3cyfN3oUp4pxsht_o3r7gpNwD-cCrJK/view?usp=sharing" target="_blank" class="project-link">
+                    <a href="paper/A PINN-Based Framework for E!cient European (1).pdf" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
@@ -162,7 +162,7 @@ function createProjectCard(project) {
                     <a href="${project.link}" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'GitHub' : 'GitHub'}
                     </a>
-                    <a href="https://drive.google.com/file/d/1_AKNhbWwvQK2saYt0k_h1U16JMGk8odx/view?usp=sharing" target="_blank" class="project-link">
+                    <a href="paper/Approximation Properties of ReLU Neural Networks and Connections with Finite Element Methods (1).pdf" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
@@ -244,6 +244,15 @@ function switchLanguage(lang) {
     
     // 更新HTML的lang属性
     document.documentElement.lang = lang;
+    
+    // 根据语言切换简历按钮显示
+    if (lang === 'en') {
+        document.querySelector('.en-cv-container').style.display = 'block';
+        document.querySelector('.zh-cv-container').style.display = 'none';
+    } else {
+        document.querySelector('.en-cv-container').style.display = 'none';
+        document.querySelector('.zh-cv-container').style.display = 'flex';
+    }
 }
 
 // 页面滚动时高亮当前section对应的导航

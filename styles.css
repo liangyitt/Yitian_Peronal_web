@@ -568,4 +568,97 @@ html[lang="zh"] .project-link {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 0.85em;
     font-weight: 500;
+}
+
+/* CV按钮样式 */
+.cv-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 9.5px;
+}
+
+.cv-btn {
+    display: inline-block;
+    /* 加深背景颜色 */
+    background-color: #d0e9f5; /* 原来是 #eaf6fa，现在加深 */
+    /* 使用与其他UI元素相同的背景图案 */
+    background-image: url('./assets/backgrounds/profile-bg.svg');
+    background-size: 120px;
+    background-position: center;
+    color: #222;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 增加阴影深度 */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* 英文CV按钮宽度 */
+.en-cv-container .cv-btn {
+    width: 180px;
+    /* 稍微调整背景大小，使其比例更适合英文CV按钮 */
+    background-size: 160px; 
+}
+
+/* 中文CV按钮宽度 */
+.zh-cv-container .cv-btn {
+    width: 150px;
+    /* 调整背景大小，使其比例更适合中文CV按钮 */
+    background-size: 140px;
+}
+
+.cv-btn:hover {
+    /* 鼠标悬停时的颜色更深 */
+    background-color: #b3ddee; /* 比常规状态更深的颜色 */
+    transform: translateY(-2px);
+}
+
+.cv-btn-text {
+    display: inline-block;
+    /* 使文字更加清晰 */
+    font-weight: 600; /* 增加字重 */
+}
+
+html[lang="zh"] .cv-btn {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.95em;
+}
+
+/* 中文按钮容器的间距也减少5% */
+.zh-cv-container {
+    gap: 9.5px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .cv-buttons {
+        flex-direction: row;
+        margin-top: 10px;
+        gap: 8px;
+    }
+    
+    .zh-cv-container {
+        display: flex;
+        gap: 8px;
+    }
+    
+    /* 移动设备上调整按钮宽度 */
+    .en-cv-container .cv-btn {
+        width: 150px;
+    }
+    
+    .zh-cv-container .cv-btn {
+        width: 120px;
+    }
+}
+
+/* 中文版名字字体大小增加 */
+html[lang="zh"] .name-block h1 {
+    font-size: 2.86em;
 } 
