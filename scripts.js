@@ -124,7 +124,7 @@ function createProjectCard(project) {
                 <div class="desc">${project.desc}</div>
                 <div class="tags">${formatTags(project.tags)}</div>
                 <div class="project-links">
-                    <a href="paper/Multi_Lane.pdf" target="_blank" class="project-link">
+                    <a href="paper/MultiLane.pdf" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
