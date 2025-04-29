@@ -1,0 +1,571 @@
+/* 导入专业中文字体 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+/* 为HTML添加语言特定的字体设置 */
+html[lang="zh"] body {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+html[lang="zh"] h1,
+html[lang="zh"] h2,
+html[lang="zh"] h3,
+html[lang="zh"] .btn,
+html[lang="zh"] .nav-btn,
+html[lang="zh"] .school,
+html[lang="zh"] .degree,
+html[lang="zh"] .tag {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* 为中文版本调整一些元素的大小 */
+html[lang="zh"] .cat-label {
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+html[lang="zh"] .btn-text {
+    font-size: 0.95em;
+}
+
+html[lang="zh"] .project-card h3 {
+    font-size: 1.15em;
+    font-weight: 700;
+}
+
+html[lang="zh"] .project-card .desc {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+html[lang="zh"] .tag {
+    font-size: 0.85em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+body {
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    color: #222;
+    line-height: 1.6;
+    font-size: 15px;
+    background-color: #eef2f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-right {
+    flex: 1;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    background: #fff url('./assets/backgrounds/profile-bg.svg');
+    background-size: 400px;
+    background-position: center;
+    border-radius: 32px;
+    margin: 0;
+    padding: 32px 40px;
+    box-shadow: 0 2px 12px #e0e7ef;
+    width: 100%;
+    min-width: 320px;
+    min-height: 180px;
+    position: relative;
+}
+
+.profile-left {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 32px;
+}
+
+.school-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.school {
+    font-size: 0.98em;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+}
+
+.degree {
+    font-size: 0.92em;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 2px;
+    margin-left: 8px;
+}
+
+.degree-detail {
+    font-size: 0.88em;
+    color: #222;
+    font-weight: 400;
+}
+
+.divider {
+    width: 1px;
+    background: #e0e7ef;
+    margin: 0 32px;
+    border-radius: 1px;
+}
+
+.profile-right {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+}
+
+.name-block {
+    margin-bottom: 18px;
+}
+
+.profile-left h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #222;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.btn, .wechat-btn {
+    display: grid;
+    grid-template-columns: auto 30px;
+    align-items: center;
+    font-family: inherit;
+    font-size: 0.9em;
+    color: #222;
+    text-decoration: none;
+    border: none;
+    background: #eaf6fa url('./assets/backgrounds/profile-bg.svg');
+    background-size: 120px;
+    background-position: center;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 22px;
+    padding: 12px 12px;
+    min-width: 130px;
+    max-width: 180px;
+    min-height: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin: 0 4px;
+    white-space: nowrap;
+    gap: 0;
+}
+
+.btn:hover, .wechat-btn:hover {
+    background-color: #d0e9f5;
+    transform: translateY(-2px);
+}
+
+.btn-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 500;
+    margin-right: 0;
+    letter-spacing: 0.5px;
+    color: #222;
+}
+
+.btn-icon {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 12px;
+}
+
+.btn img, .wechat-btn img {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+}
+
+.category-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    min-width: 320px;
+    padding: 10px 0 4px 0;
+    background: #fff url('./assets/backgrounds/profile-bg.svg');
+    background-size: 400px;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #e0e7ef;
+}
+
+.nav-btn {
+    display: grid;
+    grid-template-columns: auto 30px;
+    align-items: center;
+    font-family: inherit;
+    font-size: 0.95em;
+    color: #222;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 8px;
+    padding: 4px 10px 2px 10px;
+    min-width: 180px;
+    min-height: 0;
+    box-shadow: none;
+    margin: 0 4px;
+    white-space: nowrap;
+    gap: 0;
+}
+
+.nav-btn.active,
+.nav-btn:focus {
+    color: #222;
+    font-weight: 700;
+    background: none;
+}
+
+.nav-btn.active::after {
+    content: '';
+    display: none;
+}
+
+.cat-label {
+    font-size: 0.95em;
+    text-align: left;
+    line-height: 1.1;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #222;
+}
+
+.cat-icon {
+    font-size: 1em;
+    color: #222;
+    text-align: center;
+    justify-self: end;
+}
+
+.project-section {
+    margin: 48px 0 36px 0;
+}
+
+.project-section h2 {
+    font-size: 1.25em;
+    color: #222;
+    margin-bottom: 24px;
+    text-align: center;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-card {
+    background: #fff url('./assets/backgrounds/profile-bg.svg');
+    background-size: 400px;
+    background-position: center;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px #e0e7ef;
+    width: 900px;
+    max-width: 98vw;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    font-size: 1em;
+}
+
+.project-card:not(:last-child)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -24px;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: #e0e7ef;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-card h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.project-card .desc {
+    font-size: 1em;
+    color: #222;
+    text-align: center;
+}
+
+.project-card .tags {
+    font-size: 0.95em;
+    color: #222;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.project-card .star {
+    font-size: 0.95em;
+    color: #222;
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f7f7f7;
+    padding: 2px 8px;
+    margin: 2px 4px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    color: #222;
+    border: 1px solid #e0e0e0;
+}
+
+.tags {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.empty-projects {
+    color: #aaa;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 20px;
+}
+
+@media (max-width: 1000px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .profile-photo {
+        width: 200px;
+        height: 320px;
+        margin-right: 0;
+    }
+    
+    .content-right {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px 2vw;
+        min-width: 0;
+        max-width: 99vw;
+        width: 100%;
+    }
+    .profile-left {
+        padding-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .divider {
+        display: none;
+    }
+    .profile-right {
+        align-items: center;
+        min-width: 0;
+        width: 90%;
+        margin-top: 16px;
+    }
+    .btn, .wechat-btn {
+        min-width: 130px;
+        width: 90%;
+        max-width: 180px;
+    }
+    .btn-text {
+        font-size: 0.9em;
+    }
+}
+
+.section-icon {
+    font-size: 1.1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+}
+
+.lang-btn {
+    background: #fff;
+    border: 1px solid #e0e7ef;
+    border-radius: 18px;
+    padding: 6px 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.lang-btn:hover {
+    background: #f0f5ff;
+}
+
+.lang-btn.active {
+    background: #1e90ff;
+    color: #fff;
+    border-color: #1e90ff;
+}
+
+.wechat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 18px;
+}
+
+.wechat-btn .btn-text {
+    flex: 1;
+    text-align: center;
+    margin-right: 0;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.2s;
+    margin: 0 5px;
+}
+
+.project-link:hover {
+    background-color: #0070dd;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+html[lang="zh"] .project-link {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.85em;
+    font-weight: 500;
+} 
