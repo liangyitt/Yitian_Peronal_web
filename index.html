@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yitian Liang's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="zh">中文</button>
+        </div>
+
+        <div class="main-content">
+            <div class="profile-photo">
+                <img src="images/2.jpg" alt="Yitian Liang">
+            </div>
+            
+            <div class="content-right">
+                <div class="header">
+                    <div class="profile-left">
+                        <div class="name-block">
+                            <h1 data-en="Yitian Liang" data-zh="梁一天">Yitian Liang</h1>
+                        </div>
+                        <div class="school-block">
+                            <div class="school" data-en="@Columbia University" data-zh="@哥伦比亚大学">@Columbia University</div>
+                            <div class="degree" data-en="Master of Science in Applied Mathematics" data-zh="应用数学理学硕士">Master of Science in Applied Mathematics</div>
+                            <div class="school" style="margin-top:18px;" data-en="@Northeastern University" data-zh="@东北大学">@Northeastern University</div>
+                            <div class="degree" data-en="Bachelor of Science in Mathematics, Minor in Data Science" data-zh="数学理学学士，数据科学辅修">Bachelor of Science in Mathematics, Minor in Data Science</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="profile-right">
+                        <a class="btn" href="https://github.com/liangyitt" target="_blank">
+                            <span class="btn-text">GitHub</span> <span class="btn-icon"><img src="assets/github.svg" alt="GitHub"></span>
+                        </a>
+                        <a class="btn" href="mailto:liang.yitt@gmail.com">
+                            <span class="btn-text" data-en="Email" data-zh="邮箱">Email</span> <span class="btn-icon"><img src="assets/email.svg" alt="Email"></span>
+                        </a>
+                        <a class="btn" href="https://www.linkedin.com/in/yitianliang" target="_blank">
+                            <span class="btn-text" data-en="LinkedIn" data-zh="领英">LinkedIn</span> <span class="btn-icon"><img src="assets/linkedin.svg" alt="LinkedIn"></span>
+                        </a>
+                        <div class="btn wechat-btn">
+                            <span class="btn-text" data-en="Wechat: TIAMTIAN0405" data-zh="微信: TIAMTIAN0405">Wechat: TIAMTIAN0405</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-nav">
+                    <a href="#quant-trading" class="nav-btn active">
+                        <span class="cat-label" data-en="Quantitative Trading" data-zh="量化交易">Quantitative Trading</span>
+                        <span class="cat-icon">📈</span>
+                    </a>
+                    <a href="#neural-network" class="nav-btn">
+                        <span class="cat-label" data-en="Neural Network" data-zh="神经网络">Neural Network</span>
+                        <span class="cat-icon">🇦🇮</span>
+                    </a>
+                    <a href="#machine-learning" class="nav-btn">
+                        <span class="cat-label" data-en="Machine Learning" data-zh="机器学习">Machine Learning</span>
+                        <span class="cat-icon">🦾</span>
+                    </a>
+                    <a href="#data-science" class="nav-btn">
+                        <span class="cat-label" data-en="Data Science" data-zh="数据科学">Data Science</span>
+                        <span class="cat-icon">📊</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <section class="project-section" id="quant-trading">
+                <h2 data-en="Quantitative Trading" data-zh="量化交易">Quantitative Trading <span class="section-icon">📈</span></h2>
+                <div class="projects" id="quant-trading-projects"></div>
+            </section>
+            <section class="project-section" id="neural-network">
+                <h2 data-en="Neural Network" data-zh="神经网络">Neural Network <span class="section-icon">🇦🇮</span></h2>
+                <div class="projects" id="neural-network-projects"></div>
+            </section>
+            <section class="project-section" id="machine-learning">
+                <h2 data-en="Machine Learning" data-zh="机器学习">Machine Learning <span class="section-icon">🦾</span></h2>
+                <div class="projects" id="machine-learning-projects"></div>
+            </section>
+            <section class="project-section" id="data-science">
+                <h2 data-en="Data Science" data-zh="数据科学">Data Science <span class="section-icon">📊</span></h2>
+                <div class="projects" id="data-science-projects"></div>
+            </section>
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html> 
