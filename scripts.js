@@ -124,7 +124,7 @@ function createProjectCard(project) {
                 <div class="desc">${project.desc}</div>
                 <div class="tags">${formatTags(project.tags)}</div>
                 <div class="project-links">
-                    <a href="paper/MultiLane.pdf" target="_blank" class="project-link">
+                    <a href="https://drive.google.com/file/d/1vCyjRdU2D3BTxu9T9-PdV4NJYnN8NiiR/view?usp=drive_link" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
@@ -143,7 +143,7 @@ function createProjectCard(project) {
                     <a href="${project.link}" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'GitHub' : 'GitHub'}
                     </a>
-                    <a href="paper/PINN.pdf" target="_blank" class="project-link">
+                    <a href="https://drive.google.com/file/d/1GDYidFYq5IIcn8-TEE8KL36FS64qaU_Z/view?usp=drive_link" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
@@ -162,7 +162,7 @@ function createProjectCard(project) {
                     <a href="${project.link}" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'GitHub' : 'GitHub'}
                     </a>
-                    <a href="paper/ReLU.pdf" target="_blank" class="project-link">
+                    <a href="https://drive.google.com/file/d/12ATa-p3yYlDMWu_MvaZUSIpD7sgW2m6t/view?usp=drive_link" target="_blank" class="project-link">
                         ${currentLang === 'en' ? 'Research Paper' : '研究论文'}
                     </a>
                 </div>
