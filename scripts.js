@@ -1,13 +1,4 @@
 const projectsEN = {
-    quantTrading: [
-        // 示例项目，如有实际项目请补充
-        // {
-        //     title: "Your Quant Project",
-        //     desc: "Description of your quant trading project.",
-        //     tags: ["Python", "Pandas"],
-        //     link: "#"
-        // }
-    ],
     neuralNetwork: [
         {
             title: "European Option Pricing (PINN Framework)",
@@ -44,6 +35,12 @@ const projectsEN = {
     ],
     dataScience: [
         {
+            title: "Corporate Data Breach Statement Analysis",
+            desc: "Analyzed corporate apology statements after data breaches from 11 major companies, examining the relationship between sentiment and stock price fluctuations with interactive visualizations.",
+            tags: ["Sentiment Analysis (VADER)", "Heaps' Law", "Plotly Dash", "Interactive Dashboard", "Stock Price Analysis"],
+            link: "https://github.com/liangyitt/liangyitt-public_statement_analysis-main"
+        },
+        {
             title: "COVID-19 Vaccine Distribution Analysis",
             desc: "Analyzed Moderna COVID-19 vaccine distribution across U.S. states to visualize allocation patterns and identify distribution insights.",
             tags: ["CDC Dataset", "Matplotlib", "Python Data Analysis", "Data Visualization"],
@@ -59,9 +56,6 @@ const projectsEN = {
 };
 
 const projectsZH = {
-    quantTrading: [
-        // 示例项目，如有实际项目请补充
-    ],
     neuralNetwork: [
         {
             title: "欧式期权定价 (PINN框架)",
@@ -97,6 +91,12 @@ const projectsZH = {
         }
     ],
     dataScience: [
+        {
+            title: "企业数据泄露声明分析",
+            desc: "分析了11家大型企业在数据泄露后的官方道歉声明，研究情感分析与股价波动之间的关系，并通过交互式可视化展示结果。",
+            tags: ["情感分析(VADER)", "希普斯定律", "Plotly Dash", "交互式仪表盘", "股价分析"],
+            link: "https://github.com/liangyitt/liangyitt-public_statement_analysis-main"
+        },
         {
             title: "新冠疫苗分发分析",
             desc: "分析Moderna新冠疫苗在美国各州的分发情况，可视化分配模式并识别分发洞察。",
@@ -191,7 +191,6 @@ function formatTags(tags) {
 
 function renderProjects() {
     const containers = {
-        quantTrading: document.getElementById('quant-trading-projects'),
         neuralNetwork: document.getElementById('neural-network-projects'),
         machineLearning: document.getElementById('machine-learning-projects'),
         dataScience: document.getElementById('data-science-projects')
@@ -257,7 +256,7 @@ function switchLanguage(lang) {
 
 // 页面滚动时高亮当前section对应的导航
 window.addEventListener('scroll', () => {
-    const sections = ['quant-trading', 'neural-network', 'machine-learning', 'data-science'];
+    const sections = ['neural-network', 'machine-learning', 'data-science'];
     let current = '';
     const scrollY = window.scrollY + 100;
     for (const id of sections) {
